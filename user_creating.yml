@@ -1,9 +1,9 @@
 ---
 - name: Creating user
   hosts: all
-
+  
   tasks:
-  - name: Creating user "{{ uusername }}" with admin access
+  - name: Creating user
     ansible.builtin.user: 
       name: user1
       password: {{ user1 | password_hash('sha512') }}
