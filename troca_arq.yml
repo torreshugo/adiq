@@ -5,5 +5,7 @@
   tasks:
   - name: troca de arqivos
     ansible.builtin.copy:
-      src: 
+      src: arquivo.txt
       dest: /home/student
+
+      
