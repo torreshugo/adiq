@@ -1,6 +1,7 @@
 ---
 - name: Arqivos
   hosts: all
+  become: yes
 
   tasks:
   - name: troca de arqivos
