@@ -5,7 +5,7 @@
   tasks:
   - name: Creating user "{{ uusername }}" with admin access
     ansible.builtin.user: 
-    name: user1
-    password: {{ user1 | password_hash('sha512') }}
+      name: user1
+      password: {{ user1 | password_hash('sha512') }}
 
     
