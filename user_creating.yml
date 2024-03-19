@@ -1,12 +1,17 @@
 ---
-- name: Creating user
+- name: Creating users
   hosts: all
   become: yes
 
   tasks:
-  - name: Creating user
+  - name: Creating user2
     ansible.builtin.user:
-      name: adiq1
-      password: "{{ 'adiq1' | password_hash('sha512') }}"
+      name: adiq2
+      password: "{{ 'adiq2' | password_hash('sha512') }}"
+
+  - name: Creating user3
+    ansible.builtin.user:
+      name: adiq3
+      password: "{{ 'adiq3' | password_hash('sha512') }}"
 
     
