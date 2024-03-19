@@ -1,0 +1,9 @@
+---
+- name: Arqivos
+  hosts: all
+
+  tasks:
+  - name: troca de arqivos
+    ansible.builtin.copy:
+      src: 
+      dest: /home/student
