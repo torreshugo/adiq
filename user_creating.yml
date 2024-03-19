@@ -1,6 +1,10 @@
 ---
 - name: Creating users
   hosts: all
+  vars:
+    vm:
+      - v1: 10.34.23.4
+      - v2: 10.34.24.2
   become: yes
 
   tasks:
@@ -12,7 +16,7 @@
 
   - name: test_ping
     ansible.builtin.ping:
-    when: result.line1 != 1 and result.line2 > 3 
+     
 
   - name: Creating user3
     ansible.builtin.user:
