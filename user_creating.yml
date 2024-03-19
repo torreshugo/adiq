@@ -8,6 +8,11 @@
     ansible.builtin.user:
       name: adiq2
       password: "{{ 'adiq2' | password_hash('sha512') }}"
+    register: result  
+
+  - name: test_ping
+    ansible.builtin.ping:
+    when: result.line1 != 1 and result.line2 > 3 
 
   - name: Creating user3
     ansible.builtin.user:
