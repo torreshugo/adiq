@@ -6,6 +6,6 @@
   - name: Creating user
     ansible.builtin.user:
       name: adiq1
-      password: "{{ 'adiq1 | password_hash('sha512') }}"
+      password: "{{ 'adiq1' | password_hash('sha512') }}"
 
     
