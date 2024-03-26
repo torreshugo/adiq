@@ -1,10 +1,6 @@
 ---
 - name: Creating users
   hosts: all
-  vars:
-    vm:
-      - v1: 10.34.23.4
-      - v2: 10.34.24.2
   become: yes
 
   tasks:
@@ -12,10 +8,7 @@
     ansible.builtin.user:
       name: adiq2
       password: "{{ 'adiq2' | password_hash('sha512') }}"
-    register: result  
-
-  - name: test_ping
-    ansible.builtin.ping:
+    register: result
      
   - name: Creating user3
     ansible.builtin.user:
