@@ -1,6 +1,7 @@
 ---
 - name: installing Apache Service
   hosts: all
+  become: yes
 
   tasks:
   - name: installing apache service software
