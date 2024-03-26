@@ -1,0 +1,21 @@
+---
+- name: installing Apache Service
+  hosts: all
+
+  tasks:
+  - name: installing apache service software
+    ansible.builtin.yum:
+      name: httpd
+      state: latest
+
+  - name: activating apache service
+    ansible.builtin.service:
+      name: httpd
+      state: started
+      enabled: yes 
+
+      
+  - name: Copy using inline content
+    ansible.builtin.copy:
+      content: 'isto é a teste para um serviço de Apache para Adiq'
+      dest: /var/www/html/index.html
