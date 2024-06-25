@@ -4,12 +4,13 @@
   sources:
     - ansible.eda.webhook:
         host: 0.0.0.0
-        port: 5001
+        port: 8001
   rules:
     - name: debug
       condition: event.payload is defined
       action:
-        run_job_template:
-          name: test_ping_1
-          organization: Org_Producao
+        debug:
+        #run_job_template:
+        #  name: test_ping_1
+        #  organization: Org_Producao
 
