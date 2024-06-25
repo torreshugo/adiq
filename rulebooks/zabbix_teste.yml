@@ -9,5 +9,7 @@
     - name: debug
       condition: event.payload is defined
       action:
-        debug:
+        run_job_template:
+          name: test_ping_1
+          organization: Org_Producao
 
